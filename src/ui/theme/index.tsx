@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 
-import themes from "./styles/primary";
+import themes from "@theme/variants/primary";
 
 function Theme({ children }: any) {
   return <ThemeProvider theme={themes}>{children}</ThemeProvider>;

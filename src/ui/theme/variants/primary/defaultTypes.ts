@@ -1,15 +1,21 @@
 export type IColors = {
+  brand_primary_00: string;
+  brand_primary_10: string;
+  brand_secondary_00: string;
+  brand_secondary_10: string;
+  dark_00: string;
+  dark_10: string;
+  grey_00: string;
+  grey_10: string;
+  grey_20: string;
+  grey_30: string;
+  blue_00: string;
+  blue_10: string;
+  danger_00: string;
+  danger_10: string;
+  success_00: string;
+  success_10: string;
   white: string;
-  rebecca_purple: string;
-  very_light_pink: string;
-  dark_grey_blue: string;
-  dark_blue_grey: string;
-  pine_green: string;
-  light_sky_blue: string;
-  light_blue_grey: string;
-  greyish_brown: string;
-  error: string;
-  success: string;
 };
 
 export type IGridSpace = {

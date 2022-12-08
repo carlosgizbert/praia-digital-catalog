@@ -1,17 +1,23 @@
 import * as T from "./defaultTypes";
 
 export const colors: T.IColors = {
-  rebecca_purple: "#663399",
-  very_light_pink: "#F2F2F2",
-  dark_grey_blue: "#2F3676",
-  dark_blue_grey: "#191847",
-  pine_green: "#071723",
-  light_sky_blue: "#DDE3E9",
-  light_blue_grey: "#C5CFD6",
-  greyish_brown: "#555555",
+  brand_primary_00: "#EA1D2C",
+  brand_primary_10: "#8A0D16",
+  brand_secondary_00: "#3F3E3E",
+  brand_secondary_10: "#323942",
+  dark_00: "#1A1A1A",
+  dark_10: "#000000",
+  grey_00: "#F7F7F7",
+  grey_10: "#B6B5B5",
+  grey_20: "#8E8E8E",
+  grey_30: "#575757",
+  blue_00: "#EAF7FC",
+  blue_10: "#46BCE7",
+  danger_00: "#EA1D2C",
+  danger_10: "#8A0D16",
+  success_00: "#53A976",
+  success_10: "#2C6D47",
   white: "#fff",
-  error: "#F59393",
-  success: "#00C57C"
 };
 
 export const IGridSpace: T.IGridSpace = {
