@@ -7,7 +7,7 @@ import ProductView, { IProduct } from '@ui/components/ProductView'
 import { catMock } from '@ui/components/Categories/mock'
 import { productsMock } from '@ui/components/ProductList/mock'
 
-import * as S from './styles'
+import * as S from '../../ui/components/pages/carrinho/styles'
 
 export default function Carrinho() {
   const [selectedProduct, setSelectedProduct] = useState<IProduct>()
@@ -17,8 +17,8 @@ export default function Carrinho() {
   return (
     <S.Wrapper>
       <S.Header>
-        <h1>Pedido</h1>
-        <h2>Mesa 3</h2>
+        <h1>Carrinho do Zé Marinheiro</h1>
+        <h2>Gyarda sol 03</h2>
       </S.Header>
       <Categories categories={catMock} idSelected="6372f89e93b0568fee8ac526" />
       <ProductList products={productsMock} onClickProduct={setSelectedProduct} />
