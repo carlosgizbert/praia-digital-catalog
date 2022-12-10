@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
-import Categories from '@ui/components/Categories'
-import ProductList from '@ui/components/ProductList'
-import ProductView, { IProduct } from '@ui/components/ProductView'
+import Categories from '../../ui/components/Categories'
+import ProductList from '../../ui/components/ProductList'
+import ProductView, { IProduct } from '../../ui/components/ProductView'
 
-import { catMock } from '@ui/components/Categories/mock'
-import { productsMock } from '@ui/components/ProductList/mock'
+import { catMock } from '../../ui/components/Categories/mock'
+import { productsMock } from '../../ui/components/ProductList/mock'
 
 import * as S from '../../ui/components/pages/carrinho/styles'
 
