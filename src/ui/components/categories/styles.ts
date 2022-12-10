@@ -57,5 +57,5 @@ export const Icon = styled.div<{ active: boolean }>`
 
 export const Label = styled.label<{ active: boolean }>`
  font-weight: bold;
- color: ${(props) => props.active ? props.theme.colors.brand_primary_00 : props.theme.colors.grey_10};
+ color: ${(props) => props.active ? props.theme.colors.dark_10 : props.theme.colors.grey_10};
 `

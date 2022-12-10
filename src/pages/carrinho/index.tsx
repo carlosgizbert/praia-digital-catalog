@@ -8,13 +8,13 @@ import * as S from './styles'
 
 export default function Carrinho() {
   return (
-    <div>
+    <S.Wrapper>
       <S.Header>
         <h1>Pedido</h1>
         <h2>Mesa 3</h2>
       </S.Header>
       <Categories categories={catMock} idSelected="6372f89e93b0568fee8ac526" />
       <ProductList products={productsMock} />
-    </div>
+    </S.Wrapper>
   )
 }

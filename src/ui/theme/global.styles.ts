@@ -22,10 +22,12 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: 1.5rem;
+    color: ${({ theme }) => theme.colors.dark_10}
   }
 
   h2 {
     font-size: 1rem;
+    color: ${({ theme }) => theme.colors.dark_00}
   }
 
 `;
