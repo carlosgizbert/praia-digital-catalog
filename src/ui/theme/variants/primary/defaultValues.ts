@@ -1,7 +1,7 @@
 import * as T from "./defaultTypes";
 
 export const colors: T.IColors = {
-  brand_primary_00: "#EA1D2C",
+  brand_primary_00: "#D73035",
   brand_primary_10: "#8A0D16",
   brand_secondary_00: "#3F3E3E",
   brand_secondary_10: "#323942",
@@ -13,7 +13,7 @@ export const colors: T.IColors = {
   grey_30: "#575757",
   blue_00: "#EAF7FC",
   blue_10: "#46BCE7",
-  danger_00: "#EA1D2C",
+  danger_00: "#D73035",
   danger_10: "#8A0D16",
   success_00: "#53A976",
   success_10: "#2C6D47",

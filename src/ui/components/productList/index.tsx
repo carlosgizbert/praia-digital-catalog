@@ -2,34 +2,22 @@ import Image from 'next/image'
 
 import { formatCurrency } from '@ui/utils'
 
+import { IProduct } from '../ProductView'
+
 import * as S from './styles'
-
-interface IIngredient {
-  name: string
-  icon: string
-  _id: string
-}
-
-interface IProduct {
-  _id: string
-  name: string
-  description: string
-  imagePath: string
-  price: number
-  category: string
-  ingredients: IIngredient[]
-}
 
 interface IProductList {
   products: IProduct[]
+  onClickProduct: (product: IProduct) => void
 }
 
-export default function ProductList({ products }: IProductList) {
+export default function ProductList({ products, onClickProduct }: IProductList) {
   return (
     <S.Products>
-        {products.map(({ _id, name, description, price, imagePath }) => {
+        {products.map((product) => {
+          const { _id, name, description, price, imagePath } = product
           return (
-            <S.Product key={_id}>
+            <S.Product key={_id} onClick={() => onClickProduct(product)}>
               <Image src={`http://54.94.46.47:3000/uploads/${imagePath}`} alt={name} width={90} height={72} className="product-image" />
               <S.Info>
                 <S.Name>{name}</S.Name>

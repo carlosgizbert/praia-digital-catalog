@@ -1,12 +1,17 @@
-import Categories from '@ui/components/categories'
-import ProductList from '@ui/components/productList'
+import { useState } from 'react'
 
-import { catMock } from '@ui/components/categories/mock'
-import { productsMock } from '@ui/components/productList/mock'
+import Categories from '@ui/components/Categories'
+import ProductList from '@ui/components/ProductList'
+import ProductView, { IProduct } from '@ui/components/ProductView'
+
+import { catMock } from '@ui/components/Categories/mock'
+import { productsMock } from '@ui/components/ProductList/mock'
 
 import * as S from './styles'
 
 export default function Carrinho() {
+  const [selectedProduct, setSelectedProduct] = useState<IProduct>()
+  
   return (
     <S.Wrapper>
       <S.Header>
@@ -14,7 +19,8 @@ export default function Carrinho() {
         <h2>Mesa 3</h2>
       </S.Header>
       <Categories categories={catMock} idSelected="6372f89e93b0568fee8ac526" />
-      <ProductList products={productsMock} />
+      <ProductList products={productsMock} onClickProduct={setSelectedProduct} />
+      {selectedProduct && <ProductView product={selectedProduct} />}
     </S.Wrapper>
   )
 }
