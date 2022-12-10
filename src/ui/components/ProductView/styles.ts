@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   top: 0;
   lefT: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   
   background-color: ${({ theme }) => theme.colors.white};
 `
