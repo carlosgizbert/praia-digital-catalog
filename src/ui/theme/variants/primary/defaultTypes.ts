@@ -51,6 +51,7 @@ export type IBorderRadius = {
 
 export type IShadowLevel = {
   level_1: string;
+  level_2: string;
 };
 
 export type IFontFamily = {

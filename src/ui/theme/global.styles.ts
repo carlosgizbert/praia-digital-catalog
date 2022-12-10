@@ -19,6 +19,15 @@ const GlobalStyle = createGlobalStyle`
       margin: 0; 
     }
   }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
 `;
 
 export default GlobalStyle;

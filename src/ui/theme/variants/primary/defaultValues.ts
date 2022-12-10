@@ -50,7 +50,8 @@ export const IBorderRadiusDefault: T.IBorderRadius = {
 };
 
 export const IShadowLevelDefault: T.IShadowLevel = {
-  level_1: "10px 22px 24px rgba(0, 0, 0, 0.5)"
+  level_1: "rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px",
+  level_2: "10px 22px 24px rgba(0, 0, 0, 0.5)"
 };
 
 export const IFontFamilyDefault: T.IFontFamily = {
