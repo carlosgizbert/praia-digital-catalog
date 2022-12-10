@@ -19,6 +19,26 @@ export const Image = styled.div<{ url: string }>`
   background-position: center center;
 `
 
+export const Close = styled.div`
+  z-index: 110;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  height: 56px;
+  width: 56px;
+
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.dark_10};
+  border-radius: 50%;
+
+  cursor: pointer;
+`
+
 export const Info = styled.div`
   display: flex;
   flex-direction: column;

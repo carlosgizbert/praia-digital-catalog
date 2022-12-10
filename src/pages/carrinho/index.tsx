@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import Categories from '@ui/components/Categories'
 import ProductList from '@ui/components/ProductList'
@@ -11,7 +11,9 @@ import * as S from './styles'
 
 export default function Carrinho() {
   const [selectedProduct, setSelectedProduct] = useState<IProduct>()
-  
+
+  const unselectProduct = () => setSelectedProduct(undefined)
+
   return (
     <S.Wrapper>
       <S.Header>
@@ -20,7 +22,12 @@ export default function Carrinho() {
       </S.Header>
       <Categories categories={catMock} idSelected="6372f89e93b0568fee8ac526" />
       <ProductList products={productsMock} onClickProduct={setSelectedProduct} />
-      {selectedProduct && <ProductView product={selectedProduct} />}
+      {selectedProduct && (
+        <ProductView
+          product={selectedProduct}
+          onClickClose={() => unselectProduct()}
+        />
+      )}
     </S.Wrapper>
   )
 }

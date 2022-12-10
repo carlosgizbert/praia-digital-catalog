@@ -1,6 +1,8 @@
 import { formatCurrency } from '@ui/utils'
 import { Button } from '@ui/components/Button'
 
+import Close from '@ui/components/Icons/x.svg'
+
 import * as S from './styles'
 
 export interface IProduct {
@@ -14,13 +16,18 @@ export interface IProduct {
 
 interface IProductView {
   product: IProduct
+  onClickClose: () => void
 }
 
-export default function ProductView({ product }: IProductView) {
+export default function ProductView({ product, onClickClose }: IProductView) {
   const { imagePath, name, description, price } = product
   return (
     <S.Wrapper>
-     <S.Image url={`http://54.94.46.47:3000/uploads/${imagePath}`} />
+     <S.Image url={`http://54.94.46.47:3000/uploads/${imagePath}`}>
+      <S.Close onClick={onClickClose}>
+        <Close />
+      </S.Close>
+     </S.Image>
       <S.Info>
         <S.Name>{name}</S.Name>
         <S.Description>{description}</S.Description>
