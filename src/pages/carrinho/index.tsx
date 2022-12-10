@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import Categories from '@ui/components/Categories'
 import ProductList from '@ui/components/ProductList'
