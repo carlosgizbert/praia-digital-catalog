@@ -1,16 +1,11 @@
 import styled from 'styled-components'
 
-export const Products = styled.div`
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-`
-
 export const Product = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  cursor: pointer;
 
   .product-image {
     border-radius: 8px;

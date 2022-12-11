@@ -2,11 +2,12 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   z-index: 100;
-  position: absolute;
+  position: fixed;
   top: 0;
   lefT: 0;
   width: 100vw;
-  height: 100%;
+  min-height: 100%;
+  overflow-y: hidden;
   
   background-color: ${({ theme }) => theme.colors.white};
 `
