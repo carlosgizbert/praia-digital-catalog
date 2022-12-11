@@ -17,9 +17,10 @@ export interface IProduct {
 interface IProductView {
   product: IProduct
   onClickClose: () => void
+  onClickAddToCart: (product: IProduct) => void
 }
 
-export default function ProductView({ product, onClickClose }: IProductView) {
+export default function ProductView({ product, onClickAddToCart, onClickClose }: IProductView) {
   const { imagePath, name, description, price } = product
   return (
     <S.Wrapper>
@@ -37,7 +38,7 @@ export default function ProductView({ product, onClickClose }: IProductView) {
           <S.PriceLabel>Valor</S.PriceLabel>
           <S.Price>{formatCurrency(price)}</S.Price>
         </S.PriceWrapper>
-        <Button label='Adicionar ao pedido' onClick={() => null} />
+        <Button label='Adicionar ao pedido' onClick={() => onClickAddToCart(product)} />
       </S.Bottom>
     </S.Wrapper>
   )

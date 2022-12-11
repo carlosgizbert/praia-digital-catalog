@@ -23,7 +23,6 @@ export default function Categories({ categories, idSelected }: ICategories) {
       <Swiper
         slidesPerView={3}
         spaceBetween={16}
-        className="mySwiper"
         >
         {categories.map(({ _id, name, icon }) => {
           return (

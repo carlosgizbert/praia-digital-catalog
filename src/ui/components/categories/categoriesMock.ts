@@ -1,4 +1,4 @@
-export const catMock = [
+export const categoriesMock = [
 	{
 		"_id": "6372f81c4976e24b2096ff3e",
 		"name": "Pizza",

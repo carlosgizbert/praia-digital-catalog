@@ -1,46 +1,53 @@
 import { useState, useEffect } from 'react'
-import { formatCurrency } from '@ui/utils'
-import { Button } from '@ui/components/Button'
 
+import useCartData from 'src/data/hook/useCartData'
+import { formatCurrency } from '@ui/utils'
 import { IProduct } from '../ProductView'
 
 import * as S from './styles'
 
-interface ICart {
-  items?: IProduct[]
+export interface ICartItem {
+  product: IProduct
+  quantity: number
 }
 
-export default function Cart({ items }: ICart) {
+export default function Cart() {
   const [total, setTotal] = useState<number>(0)
 
-  const hasItems = !!items
+  const { cartItems } = useCartData()
+
+  const hasItems = !!cartItems
 
   useEffect(() => {
-    if (items) {
-      const totalValue = items.reduce((acc, product) => acc + product.price, 0)
+    if (cartItems) {
+      const totalValue = cartItems.reduce((acc, item) => acc + item.product.price, 0)
       setTotal(totalValue)
     }
-  }, [items])
+  }, [cartItems])
   
 
   return (
     <S.Wrapper>
-      {hasItems && items.map((product) => {
-        const { imagePath, name, price } = product
-        return (
-          <>
-          <S.Image url={`http://54.94.46.47:3000/uploads/${imagePath}`} />
-          <S.Details>
-            <S.Quantity>2x</S.Quantity>
-            <S.Info>
-              <S.Name>{name}</S.Name>
-              <S.Price>{formatCurrency(price)}</S.Price>
-            </S.Info>
-          </S.Details>
-          </>
-        )
-      })}
-      <S.Bottom>
+      {hasItems && (
+        <S.Items>
+          {cartItems.map((item) => {
+            const { _id, imagePath, name, price } = item.product
+            return (
+              <S.Item key={_id}>
+              <S.Image url={`http://54.94.46.47:3000/uploads/${imagePath}`} />
+              <S.Details>
+                <S.Quantity>{item.quantity}x</S.Quantity>
+                <S.Info>
+                  <S.Name>{name}</S.Name>
+                  <S.Price>{formatCurrency(price)}</S.Price>
+                </S.Info>
+              </S.Details>
+              </S.Item>
+            )
+          })}
+        </S.Items>
+      )}
+      {/* <S.Bottom>
         <S.PriceWrapper>
           {hasItems && (
             <>
@@ -55,7 +62,7 @@ export default function Cart({ items }: ICart) {
           )}
         </S.PriceWrapper>
         <Button label='Confirmar pedido' onClick={() => null} disabled={!hasItems} />
-      </S.Bottom>
+      </S.Bottom> */}
     </S.Wrapper>
   )
 }
