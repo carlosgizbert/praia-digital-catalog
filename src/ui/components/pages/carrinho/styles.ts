@@ -8,5 +8,5 @@ export const Wrapper = styled.div`
 export const Header = styled.header`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.4rem;
 `

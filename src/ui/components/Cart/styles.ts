@@ -5,12 +5,8 @@ export const Wrapper = styled.div`
   position: fixed;
   bottom: 0;
   lefT: 0; */
-  width: 100vw;
-  height: 200px;
-
   display: flex;
-  
-  background-color: ${({ theme }) => theme.colors.blue_00};
+  flex-direction: column;
 `
 
 export const Items = styled.div`
@@ -58,12 +54,7 @@ export const Name = styled.span`
 `
 
 export const Bottom = styled.div`
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
   padding: 0 1.5rem;
-  height: 100px;
 
   width: 100%;
   display: flex;
@@ -71,7 +62,6 @@ export const Bottom = styled.div`
   align-items: center;
   gap: 0.5rem;
 
-  background-color: white;
 `
 
 export const PriceWrapper = styled.div`

@@ -21,8 +21,8 @@ export default function Categories({ categories, idSelected }: ICategories) {
   return (
     <S.Categories>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={16}
+        slidesPerView={2}
+        spaceBetween={8}
         >
         {categories.map(({ _id, name, icon }) => {
           return (

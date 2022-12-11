@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
-export const Products = styled.div`
-  margin-top: 1.5rem;
+export const Items = styled.div`
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  flex: 1;
+  gap: 0.8rem;
+  max-height: calc(100vh);
+  overflow-y: scroll;
 `

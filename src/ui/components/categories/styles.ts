@@ -34,24 +34,20 @@ export const Categories = styled.div`
 
 export const Category = styled.div<{ active: boolean }>`
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 
   color: ${(props) => props.active && props.theme.colors.white};
+  background-color: ${(props) => props.active ? props.theme.colors.grey_00 : props.theme.colors.white};
+  box-shadow: ${(props) => props.active && props.theme.shadowLevel.level_1};
+  padding: 0.5rem 1rem;
 `
 
 export const Icon = styled.div<{ active: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  height: 50px;
-  width: 50px;
-  background-color: ${({ theme }) => theme.colors.white};
-  
-  border-radius: 50%;
-  box-shadow: ${(props) => props.active && props.theme.shadowLevel.level_1};
   opacity: ${(props) => !props.active && '0.8'};
 `
 

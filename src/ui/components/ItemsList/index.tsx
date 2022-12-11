@@ -4,16 +4,16 @@ import Item from './Item'
 import * as S from './styles'
 
 interface IProductList {
-  products: IProduct[]
+  items: IProduct[]
   onClickProduct: (product: IProduct) => void
 }
 
-export default function ProductList({ products, onClickProduct }: IProductList) {
+export default function ItemsList({ items, onClickProduct }: IProductList) {
   return (
-    <S.Products>
-        {products.map((product) => {
+    <S.Items>
+        {items.map((product) => {
           return <Item key={product._id} product={product} onClickProduct={() => onClickProduct(product)} />
         })}
-      </S.Products>
+      </S.Items>
   )
 }

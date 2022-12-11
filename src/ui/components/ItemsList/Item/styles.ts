@@ -30,5 +30,5 @@ export const Description = styled.span`
 
 export const Price = styled.span`
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.dark_10}
+  color: ${({ theme }) => theme.colors.grey_30}
 `

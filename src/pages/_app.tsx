@@ -6,11 +6,11 @@ import { CartProvider } from 'src/data/context/Cart';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <CartProvider>
-      <Theme>
+    <Theme>
+      <CartProvider>
         <GlobalStyle />
         <Component {...pageProps} />
-      </Theme>
-    </CartProvider>
+      </CartProvider>
+    </Theme>
   )
 }

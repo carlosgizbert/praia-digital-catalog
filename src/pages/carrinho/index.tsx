@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import Categories from '@ui/components/Categories'
-import ProductList from '@ui/components/ItemsList'
 import { ICartItem } from '@ui/components/Cart'
+import ItemsList from '@ui/components/ItemsList'
 import ProductView, { IProduct } from '@ui/components/ProductView'
 
 import { categoriesMock } from '@ui/components/Categories/categoriesMock'
@@ -49,12 +49,6 @@ export default function Carrinho() {
 
       return newCartItems
     })
-    // const selected = products.filter((p) => p._id === productId)[0]
-    // const selectedCartItem: ICartItem = {
-    //   ...selected,
-    //   quantity: 1,
-    // }
-    // setCartItems([...cartProducts, { selected }])
   }
 
   return (
@@ -65,7 +59,7 @@ export default function Carrinho() {
         <h2>🏖️ Guarda sol 03</h2>
       </S.Header>
       <Categories categories={categories} idSelected="6372f89e93b0568fee8ac526" />
-      <ProductList products={products} onClickProduct={setSelectedProduct} />
+      <ItemsList items={products} onClickProduct={setSelectedProduct} />
       {selectedProduct && (
         <ProductView
           product={selectedProduct}

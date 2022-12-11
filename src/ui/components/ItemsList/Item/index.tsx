@@ -17,7 +17,7 @@ export default function Item({ product, onClickProduct }: IItem) {
     <Image src={`http://54.94.46.47:3000/uploads/${imagePath}`} alt={name} width={90} height={72} className="product-image" />
     <S.Info>
       <S.Name>{name}</S.Name>
-      <S.Description>{description}</S.Description>
+      {/* <S.Description>{description}</S.Description> */}
       <S.Price>{formatCurrency(price)}</S.Price>
     </S.Info>
   </S.Product>

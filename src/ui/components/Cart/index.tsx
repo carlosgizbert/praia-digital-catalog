@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
-
 import useCartData from 'src/data/hook/useCartData'
+
+import { Button } from '@ui/components/Button'
+
 import { formatCurrency } from '@ui/utils'
 import { IProduct } from '../ProductView'
 
@@ -12,18 +13,9 @@ export interface ICartItem {
 }
 
 export default function Cart() {
-  const [total, setTotal] = useState<number>(0)
-
-  const { cartItems } = useCartData()
+  const { cartItems, totalPrice } = useCartData()
 
   const hasItems = !!cartItems
-
-  useEffect(() => {
-    if (cartItems) {
-      const totalValue = cartItems.reduce((acc, item) => acc + item.product.price, 0)
-      setTotal(totalValue)
-    }
-  }, [cartItems])
   
 
   return (
@@ -47,12 +39,12 @@ export default function Cart() {
           })}
         </S.Items>
       )}
-      {/* <S.Bottom>
+      <S.Bottom>
         <S.PriceWrapper>
           {hasItems && (
             <>
             <S.PriceLabel>Total</S.PriceLabel>
-            <S.Price>{formatCurrency(total)}</S.Price>
+            <S.Price>{formatCurrency(totalPrice)}</S.Price>
             </>
           )}
           {!hasItems && (
@@ -62,7 +54,7 @@ export default function Cart() {
           )}
         </S.PriceWrapper>
         <Button label='Confirmar pedido' onClick={() => null} disabled={!hasItems} />
-      </S.Bottom> */}
+      </S.Bottom>
     </S.Wrapper>
   )
 }
