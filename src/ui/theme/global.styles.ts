@@ -12,12 +12,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     background-color: ${({ theme }) => theme.colors.white};
     color: ${({ theme }) => theme.colors.grey_30};
-
-    input[type=number]::-webkit-inner-spin-button, 
-    input[type=number]::-webkit-outer-spin-button { 
-      -webkit-appearance: none; 
-      margin: 0; 
-    }
   }
 
   h1 {
